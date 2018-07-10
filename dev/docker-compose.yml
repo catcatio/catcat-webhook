@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  catcat-webhook:
+    container_name: catcat-webhook
+    env_file: .env
+    environment:
+      - PORT=${PORT:-9090}
+    image: catcatio/catcat-webhook
+    working_dir: /usr/app
+    ports:
+      - "${PORT:-9090}:${PORT:-9090}"
+    volumes:
+      - ../:/usr/app
+    command: npm run init

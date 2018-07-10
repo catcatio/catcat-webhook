@@ -1,0 +1,28 @@
+{
+  "name": "catcat-webhook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:catcatio/catcat-webhook.git",
+  "author": "Todsaporn (katopz) Banjerdkit <katopz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "actions-on-google": "^2.2.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dialogflow-fulfillment": "^0.4.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "scripts": {
+    "init": "npm i && nodemon index.js",
+    "jest": "jest --watchAll",
+    "mon": "nodemon index.js"
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "describe",
+      "expect"
+    ]
+  }
+}

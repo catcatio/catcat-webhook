@@ -1,0 +1,1 @@
+ssh root@catcat.io "cd ~/webhook/dev && . $1"

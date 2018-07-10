@@ -1,0 +1,2 @@
+docker-compose down
+docker build --no-cache -t catcatio/catcat-webhook .
