@@ -1,0 +1,76 @@
+{
+  "responseId": "5ad9add6-6859-449b-b835-a32c4172f185",
+  "queryResult": {
+    "queryText": "show all events",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/catcatchatbot/agent/sessions/f50cf3a3-9ed2-4a63-af7f-923f5e18ab9d/contexts/book-tickets-events",
+        "lifespanCount": 5
+      },
+      {
+        "name": "projects/catcatchatbot/agent/sessions/f50cf3a3-9ed2-4a63-af7f-923f5e18ab9d/contexts/eventsticketsbook-followup",
+        "parameters": {
+          "event-title": "Stellar 101",
+          "event-title.original": ""
+        }
+      },
+      {
+        "name": "projects/catcatchatbot/agent/sessions/f50cf3a3-9ed2-4a63-af7f-923f5e18ab9d/contexts/generic",
+        "lifespanCount": 4,
+        "parameters": {
+          "event-title": "Stellar 101",
+          "facebook_sender_id": "2041865512493372",
+          "event-title.original": ""
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/catcatchatbot/agent/intents/99333f06-75d8-4cc3-bdd8-23f79e1a5cc3",
+      "displayName": "events.list"
+    },
+    "intentDetectionConfidence": 0.81,
+    "languageCode": "en"
+  },
+  "originalDetectIntentRequest": {
+    "source": "facebook",
+    "payload": {
+      "data": {
+        "sender": {
+          "id": "2041865512493372"
+        },
+        "recipient": {
+          "id": "137702410223751"
+        },
+        "message": {
+          "nlp": {
+            "entities": {
+              "sentiment": [
+                {
+                  "confidence": 0.67579412160136,
+                  "value": "neutral"
+                }
+              ]
+            }
+          },
+          "mid": "GeCeGPRtULL0oXbm-kTPf0IG9_jXNM2I6PMzLlLcMl8YrjLPEknYdIgYyy59dlY4qKTxVkx_2fo-0JSl11JLbQ",
+          "text": "show all events",
+          "seq": 2535
+        },
+        "timestamp": 1531991145742
+      },
+      "source": "facebook"
+    }
+  },
+  "session": "projects/catcatchatbot/agent/sessions/f50cf3a3-9ed2-4a63-af7f-923f5e18ab9d"
+}
