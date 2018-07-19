@@ -1,0 +1,18 @@
+curl \
+-H "Authorization: Bearer " \
+"https://api.dialogflow.com/v1/query?v=20150910&contexts=shop&lang=en&query=ticket&sessionId=15cdbbfa-453d-4f68-a299-103cfb960de9&timezone=America/New_York"
+
+
+curl \
+https://api.dialogflow.com/v1/query?v=20150910 \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Bearer ' \
+-d '{
+  "contexts": [
+    "ticket"
+  ],
+  "lang": "en",
+  "query": "ticket",
+  "sessionId": "54389512-7f32-470d-b1b6-2766cf11b579",
+  "timezone": "America/New_York"
+}'
