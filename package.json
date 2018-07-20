@@ -6,6 +6,7 @@
   "author": "Todsaporn (katopz) Banjerdkit <katopz@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@rabbotio/fetcher": "^1.1.0",
     "actions-on-google": "^2.2.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
