@@ -1,0 +1,10 @@
+{
+  "requestSource": "FACEBOOK",
+  "locale": "en",
+  "action": "events.tickets.book-yes",
+  "session": "projects/catcatchatbot/agent/sessions/85b029b6-f847-418a-812a-ae9d5cc146c4",
+  "parameters": {
+    "event-title": "Hyperledger 101"
+  },
+  "senderId": "2238896416126713"
+}
