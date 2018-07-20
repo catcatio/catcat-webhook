@@ -1,0 +1,16 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "messaging_type": "NON_PROMOTIONAL_SUBSCRIPTION",
+  "recipient": {
+    "id": "2238896416126713"
+  },
+  "message": {
+    "attachment": {
+      "type": "image",
+      "payload": {
+        "is_reusable": true,
+        "url": "https://firebasestorage.googleapis.com/v0/b/catcatchatbot.appspot.com/o/0b0a69b119e86bb5c66bd1e3e72f853062bec514375c4ad25187a945891fa18b.png?alt=media&token=69e49c03-1d9b-4749-a529-2d3ac6b900e3"
+      }
+    }
+  }
+}' "https://graph.facebook.com/v2.6/me/message_attachments?access_token=$PAGE_ACCESS_TOKEN"
+ 

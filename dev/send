@@ -3,8 +3,19 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "recipient": {
     "id": "2238896416126713"
   },
-  "message": {
-    "text": "hello, world!"
+  "message":{
+    "attachment": {
+      "type": "template",
+      "payload": {
+         "template_type": "media",
+         "elements": [
+            {
+              "media_type": "image",
+              "url": "https://firebasestorage.googleapis.com/v0/b/catcatchatbot.appspot.com/o/0b0a69b119e86bb5c66bd1e3e72f853062bec514375c4ad25187a945891fa18b.png?alt=media&token=69e49c03-1d9b-4749-a529-2d3ac6b900e3"
+            }
+         ]
+      }
+    }    
   }
 }' "https://graph.facebook.com/v2.6/me/messages?access_token=$PAGE_ACCESS_TOKEN"
  

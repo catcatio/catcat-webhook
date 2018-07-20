@@ -1,0 +1,15 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "messaging_type": "NON_PROMOTIONAL_SUBSCRIPTION",
+  "recipient": {
+    "id": "2238896416126713"
+  },
+  "message":{
+    "attachment":{
+      "type":"image", 
+      "payload":{
+        "attachment_id": "210118692982122"
+      }
+    }
+  }
+}' "https://graph.facebook.com/v2.6/me/messages?access_token=$PAGE_ACCESS_TOKEN"
+ 
