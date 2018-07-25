@@ -6,11 +6,10 @@
   "author": "Todsaporn (katopz) Banjerdkit <katopz@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@rabbotio/fetcher": "^1.1.0",
-    "actions-on-google": "^2.2.0",
+    "@rabbotio/fetcher": "^1.1.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
-    "dialogflow-fulfillment": "^0.4.1",
+    "dialogflow-fulfillment": "^0.5.0",
     "express": "^4.16.3",
     "morgan": "^1.9.0"
   },
