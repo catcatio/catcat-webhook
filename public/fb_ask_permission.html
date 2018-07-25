@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  loading...
+</body>
+<script>
+  function getJSON(url, callback) {
+    var req = new XMLHttpRequest();
+    req.overrideMimeType("application/json");
+    req.open('GET', url, true);
+    req.onreadystatechange = function () {
+      if (req.readyState == 4 && req.status == "200") {
+        callback(req.responseText);
+      }
+    };
+    req.send(null);
+  }
+
+  window.extAsyncInit = function () {
+    document.body.innerText = "askPermission"
+    // the Messenger Extensions JS SDK is done loading
+    MessengerExtensions.askPermission(
+      function (permission_response) {
+        // Person grants or rejects the asked permission.
+        let permissions = permission_response.permissions; // list of all permissions granted
+        let isGranted = permission_response.isGranted;
+
+        if (isGranted) {
+          // User has granted user_profile permission
+          document.body.innerText = JSON.stringify(permissions)
+
+          // Get user profile
+          MessengerExtensions.getContext('314223362412440',
+            function success(thread_context) {
+              document.body.innerText = JSON.stringify(thread_context)
+              // success
+              const { psid } = thread_context
+              const pageAccessToken = ""
+              getJSON(`https://graph.facebook.com/${psid}?fields=first_name,last_name,profile_pic&access_token=${pageAccessToken}`, jsonText => {
+                document.body.innerText = jsonText
+              })
+            },
+            function error(err) {
+              // error
+              document.body.innerText = err
+            }
+          );
+
+        }
+
+      }, function (errorCode, errorMessage) {
+        // Error occurred
+        document.body.innerText = errorMessage
+      },
+      "user_profile"
+    );
+  };
+</script>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/messenger.Extensions.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'Messenger'));
+</script>
+
+</html>

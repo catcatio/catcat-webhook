@@ -1,0 +1,1 @@
+curl -X GET "https://graph.facebook.com/2238896416126713?fields=first_name,last_name,profile_pic&access_token="

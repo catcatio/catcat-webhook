@@ -1,0 +1,1 @@
+scp -r ../public/fb_ask_permission.html root@catcat.io:/var/www/html/fb_ask_permission.html
