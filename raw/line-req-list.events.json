@@ -1,0 +1,57 @@
+{
+  "responseId": "59d8efe6-b495-48c8-9ed5-9e7c95f5fde2",
+  "queryResult": {
+    "queryText": "Event ",
+    "action": "list.events",
+    "parameters": {
+      "event-title": ""
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/catcatchatbot/agent/sessions/af869f75-b73e-4434-ae99-8e3f56abeae5/contexts/book-tickets-events",
+        "lifespanCount": 5,
+        "parameters": {
+          "event-title": "",
+          "event-title.original": ""
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/catcatchatbot/agent/intents/99333f06-75d8-4cc3-bdd8-23f79e1a5cc3",
+      "displayName": "events.list"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en"
+  },
+  "originalDetectIntentRequest": {
+    "source": "line",
+    "payload": {
+      "data": {
+        "replyToken": "2fa37534b8f547a8a225a37387e3e798",
+        "source": {
+          "type": "user",
+          "userId": "U9e4b497444d2ebc31988f8602a7961fa"
+        },
+        "message": {
+          "text": "Event ",
+          "id": "8322413328612",
+          "type": "text"
+        },
+        "type": "message",
+        "timestamp": 1532594907599
+      },
+      "source": "line"
+    }
+  },
+  "session": "projects/catcatchatbot/agent/sessions/af869f75-b73e-4434-ae99-8e3f56abeae5"
+}
