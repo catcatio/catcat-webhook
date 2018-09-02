@@ -12,4 +12,9 @@ services:
       - "${PORT:-9090}:${PORT:-9090}"
     volumes:
       - ../:/usr/app
+    logging:
+      driver: gelf
+      options:
+        gelf-address: udp://localhost:${LS_PORT:-12201}
+        tag: "catcat-webhook"
     command: npm run init
